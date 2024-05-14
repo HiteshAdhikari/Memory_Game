@@ -7,7 +7,7 @@ const Cards = (props) => {
   const shuffle = props.shuffle;
   const updateCount = props.updateCount;
   const count = props.count;
-  const score = props.score;
+  const reset = props.reset;
 
   const [checkData, setcheckData] = useState([]);
   function handleClick(value) {
@@ -19,7 +19,8 @@ const Cards = (props) => {
       );
       if (increase) {
         let value = prompt("Cards for next game? (Minimum 10 cards)", 10);
-        updateCount(value);
+        updateCount(Number(value));
+        reset();
       }
     } else {
       setcheckData((prevData) => [...prevData, value]);

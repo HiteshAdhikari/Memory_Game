@@ -5,13 +5,17 @@ import "./App.css";
 
 function App() {
   const [Data, setData] = useState([]);
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(4);
   const [score, setScore] = useState(0);
   const [bestScore, setbestScore] = useState(0);
 
   if (score > bestScore) {
     setbestScore(score);
   }
+  const resetBest = () => {
+    setScore(0);
+    setbestScore(0);
+  };
   const scoreUpdate = (scoreValue) => {
     setScore(scoreValue);
   };
@@ -60,6 +64,7 @@ function App() {
       <Header score={score} best={bestScore} />
       {Data && (
         <Cards
+          reset={resetBest}
           count={count}
           score={score}
           updateCount={countUpdate}
