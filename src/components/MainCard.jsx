@@ -9,7 +9,7 @@ const MainCard = (props) => {
       src={image}
       alt={image}
       key={value}
-      className="w-auto cursor-pointer"
+      className="w-auto cursor-pointer "
     />
   );
 };

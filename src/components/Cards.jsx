@@ -36,7 +36,7 @@ const Cards = (props) => {
   }, [checkData.length]);
 
   return (
-    <div className="grid grid-cols-5 gap-10 p-4 w-4/5 m-auto">
+    <div className="grid sm:grid-cols-5 grid-cols-3 gap-10 p-4 sm:w-4/5 w-5/5 m-auto ">
       {Data.map((items) => {
         return (
           <MainCard
