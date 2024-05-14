@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   const [Data, setData] = useState([]);
-  const [count, setCount] = useState(4);
+  const [count, setCount] = useState(10);
   const [score, setScore] = useState(0);
   const [bestScore, setbestScore] = useState(0);
 
